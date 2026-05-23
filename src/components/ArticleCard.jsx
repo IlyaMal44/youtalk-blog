@@ -1,5 +1,3 @@
-import Icon from './Icon'
-
 function ArticleCard({ article }) {
   return (
     <article className={`card${article.wide ? ' card--wide' : ''}`}>
@@ -9,7 +7,7 @@ function ArticleCard({ article }) {
       <div className="card__tags">
         {article.tags.map((tag) => (
           <span className="card__tag" key={tag}>
-            <Icon name="tag" />
+            <span className="card__tag-icon" aria-hidden="true">🦄</span>
             {tag}
           </span>
         ))}

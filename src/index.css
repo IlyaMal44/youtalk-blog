@@ -332,10 +332,14 @@ ol {
   font-weight: 600;
 }
 
-.card__tag .icon {
-  width: 14px;
-  height: 14px;
-  color: #963cff;
+.card__tag-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 18px;
+  height: 18px;
+  font-size: 14px;
+  line-height: 1;
 }
 
 .card__body {
@@ -443,6 +447,11 @@ ol {
   height: 331px;
 }
 
+.article__image--side {
+  width: 282px;
+  height: 380px;
+}
+
 .article__toc {
   margin-bottom: 24px;
 }
@@ -462,6 +471,12 @@ ol {
   padding-left: 22px;
 }
 
+.article__toc ul ul {
+  gap: 4px;
+  margin-top: 4px;
+  padding-left: 24px;
+}
+
 .article__toc li::marker,
 .article__list li::marker {
   color: var(--color-accent);
@@ -478,11 +493,24 @@ ol {
   margin-bottom: 24px;
 }
 
+.article__media-row {
+  display: grid;
+  grid-template-columns: 282px 1fr;
+  gap: 24px;
+  align-items: start;
+}
+
 .article p,
 .article li,
 .quote {
   font-size: 16px;
   line-height: 1.5;
+}
+
+.article__caption {
+  color: var(--color-muted);
+  font-size: 14px;
+  line-height: 1.3;
 }
 
 .quote {
@@ -597,8 +625,15 @@ ol {
   text-align: center;
 }
 
+.sidebar-card__hero {
+  width: 257px;
+  height: 206px;
+  margin: 0 auto 24px;
+  object-fit: contain;
+}
+
 .sidebar-card h2 {
-  margin: 16px 0 8px;
+  margin: 0 0 8px;
   font-size: 20px;
   line-height: 1.2;
 }
@@ -614,6 +649,14 @@ ol {
   box-shadow: none;
 }
 
+.sidebar-card--blue p {
+  margin-bottom: 24px;
+}
+
+.sidebar-card:not(.sidebar-card--price) .button {
+  width: 100%;
+}
+
 .therapist__photo {
   width: 120px;
   height: 120px;
@@ -622,16 +665,53 @@ ol {
   object-fit: cover;
 }
 
+.therapist {
+  position: relative;
+}
+
+.therapist__badges {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  display: grid;
+  gap: 8px;
+}
+
+.therapist__badges span {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  min-height: 24px;
+  padding: 0 6px;
+  border-radius: 6px;
+  background: rgba(243, 244, 248, 0.7);
+  font-size: 12px;
+  font-weight: 500;
+}
+
 .therapist__role {
+  margin-bottom: 4px;
+  color: var(--color-text);
+  font-weight: 600;
+}
+
+.therapist__meta {
   color: var(--color-muted);
+}
+
+.therapist h3 {
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 1px solid #dedede;
+  font-size: 16px;
+  line-height: 1.5;
+  text-align: left;
 }
 
 .therapist ul {
   display: grid;
   gap: 8px;
-  margin: 16px 0;
-  padding-top: 16px;
-  border-top: 1px solid #dedede;
+  margin: 8px 0 16px;
   text-align: left;
   list-style-position: inside;
 }
@@ -641,13 +721,27 @@ ol {
 }
 
 .sidebar-banner {
-  display: block;
+  display: grid;
+  min-height: 292px;
   overflow: hidden;
+  padding: 60px 24px 0;
   border-radius: 16px;
+  background: #2963a3;
+  color: #ffffff;
+  text-align: center;
+}
+
+.sidebar-banner span {
+  position: relative;
+  z-index: 1;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 1.25;
 }
 
 .sidebar-banner img {
-  width: 100%;
+  width: 170px;
+  margin: 18px auto 0;
 }
 
 .sidebar-card--price {
@@ -933,6 +1027,15 @@ ol {
 
   .article__topics {
     display: none;
+  }
+
+  .article__media-row {
+    grid-template-columns: 1fr;
+  }
+
+  .article__image--side {
+    width: 100%;
+    height: 260px;
   }
 
   .article__image--small {

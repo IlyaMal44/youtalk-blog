@@ -4,24 +4,32 @@ function Sidebar() {
   return (
     <aside className="sidebar" aria-label="Дополнительные материалы">
       <section className="sidebar-card sidebar-card--blue">
-        <img src={sidebarImages.chat} alt="" />
+        <img className="sidebar-card__hero" src={sidebarImages.chat} alt="" />
         <h2>Загружаем свободные окошки</h2>
-        <p>Все в порядке, сейчас мы подберем для вас подходящего психолога.</p>
+        <p>Все в порядке, сейчас мы перенаправим вас в сервис записи Qlick, через который удобно выбрать дату, время встречи и оплатить её</p>
         <button className="button button--primary" type="button">Подробнее</button>
       </section>
 
       <section className="sidebar-card therapist">
+        <div className="therapist__badges" aria-label="Форматы работы">
+          <span>📝 Переписка</span>
+          <span>📹 Видео</span>
+        </div>
         <img className="therapist__photo" src={sidebarImages.person} alt="Психолог Лилия" />
         <h2>Лилия</h2>
         <p className="therapist__role">Психолог</p>
+        <p className="therapist__meta">Опыт 6 лет · 43 года</p>
+        <h3>С чем работает психолог</h3>
         <ul>
-          <li>Опыт 6 лет</li>
-          <li>43 года</li>
+          <li>Тревога, тревожности</li>
+          <li>Подавленность</li>
+          <li>Тревога и панические атаки</li>
         </ul>
         <button className="button button--primary" type="button">Подробнее</button>
       </section>
 
-      <a className="sidebar-banner" href="/blog" aria-label="Подарить заботу">
+      <a className="sidebar-banner" href="/blog">
+        <span>Дарите заботу</span>
         <img src={sidebarImages.gift} alt="" />
       </a>
 
