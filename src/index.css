@@ -524,7 +524,7 @@ ol {
   width: 240px;
   height: 168px;
   border-radius: 50%;
-  background: #f3f7fe;
+  background: #ffedee;
 }
 
 .article__frame-quote p {
@@ -604,6 +604,12 @@ ol {
   margin-top: 16px;
   font-size: 16px;
   line-height: 1.5;
+}
+
+.article__separator {
+  width: 178.75px;
+  height: 32px;
+  margin: 24px auto;
 }
 
 .article__topics {

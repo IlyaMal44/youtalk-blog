@@ -2,6 +2,7 @@ import articleChair from '../assets/youtalk/images/article-chair.png'
 import articleHands from '../assets/youtalk/images/article-hands.png'
 import articleHero from '../assets/youtalk/images/article-hero.png'
 import articlePeople from '../assets/youtalk/images/article-people.png'
+import articleSeparator from '../assets/youtalk/images/article-separator.svg'
 import articleSunset from '../assets/youtalk/images/article-sunset.png'
 import articleWoman from '../assets/youtalk/images/article-woman.png'
 import ctaFamily from '../assets/youtalk/images/cta-family.png'
@@ -14,6 +15,7 @@ export const articleImages = {
   hands: articleHands,
   hero: articleHero,
   people: articlePeople,
+  separator: articleSeparator,
   sunset: articleSunset,
   woman: articleWoman,
   ctaFamily,
