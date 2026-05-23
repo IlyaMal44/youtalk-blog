@@ -1,16 +1,112 @@
-# React + Vite
+# YouTalk Blog
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Адаптивная верстка блога YouTalk по Figma-макету. Проект сделан на React и Vite, с акцентом на семантическую разметку, компонентную структуру, БЭМ-классы
 
-Currently, two official plugins are available:
+## Что реализовано
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- Главная страница блога со списком статей, фильтрами-тегами и карточками материалов
+- Страница статьи `Как не утонуть в тревоге и управлять своими страхами`
+- Header, footer, breadcrumbs, sidebar, CTA-блоки и декоративные элементы
+- Адаптивная верстка для desktop, tablet и mobile-экранов
+- Локальные изображения и SVG-ассеты, подготовленные по макету
+- Состояния интерактивных элементов: ссылки, кнопки, фокус и hover
 
-## React Compiler
+## Стек
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- React
+- Vite
+- CSS
+- ESLint
 
-## Expanding the ESLint configuration
+## Архитектура
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+```text
+src/
+  components/        Переиспользуемые UI-блоки
+    Header.jsx
+    Footer.jsx
+    Breadcrumbs.jsx
+    TagList.jsx
+    ArticleCard.jsx
+    Sidebar.jsx
+    Icon.jsx
+
+  pages/             Страницы приложения
+    BlogPage.jsx
+    ArticlePage.jsx
+
+  data/              Данные и импорты ассетов
+    blogData.js
+    articleAssets.js
+
+  assets/youtalk/    Локальные изображения и SVG
+  App.jsx            Выбор страницы по текущему URL
+  main.jsx           Точка входа React
+  index.css          Глобальные стили и адаптив
+```
+
+Проект не использует роутер: для учебной задачи переключение между главной и статьей сделано в `App.jsx` по текущему `window.location.pathname`. Если в URL есть `article`, рендерится страница статьи, иначе главная страница блога
+
+## Как запустить
+
+Установить зависимости:
+
+```bash
+npm install
+```
+
+Запустить dev-сервер:
+
+```bash
+npm run dev
+```
+
+Открыть в браузере:
+
+```text
+http://localhost:5173/
+```
+
+Проверить страницу статьи:
+
+```text
+http://localhost:5173/article
+```
+
+## Проверка на телефоне
+
+Если телефон и компьютер находятся в одной Wi-Fi сети, можно открыть проект с телефона
+
+Узнать локальный IP на macOS:
+
+```bash
+ipconfig getifaddr en0
+```
+
+Запустить Vite для доступа из локальной сети:
+
+```bash
+npm run dev -- --host 0.0.0.0
+```
+
+После этого открыть на телефоне адрес из терминала, например:
+
+```text
+http://192.168.0.121:5173/
+```
+
+Если порт `5173` занят, Vite может предложить другой порт, например `5174`.
+
+## Проверка качества
+
+Запустить ESLint:
+
+```bash
+npm run lint
+```
+
+Собрать production-версию:
+
+```bash
+npm run build
+```
