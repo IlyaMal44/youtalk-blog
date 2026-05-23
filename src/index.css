@@ -833,16 +833,16 @@ ol {
 }
 
 .sidebar-banner__gift--two {
-  top: 184px;
-  left: 196px;
+  top: 204px;
+  left: 175px;
   width: 79px;
   height: 120px;
   transform: rotate(-90deg);
 }
 
 .sidebar-banner__gift--three {
-  top: 151px;
-  left: 7px;
+  top: 168px;
+  left: -10px;
   width: 112px;
   height: 146px;
   transform: rotate(90deg);
