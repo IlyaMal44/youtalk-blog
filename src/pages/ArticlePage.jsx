@@ -123,7 +123,9 @@ function ArticlePage() {
               <p>Поможем подобрать специалиста по работе с подобным запросом</p>
               <button className="button button--primary" type="button">Подобрать психолога</button>
             </div>
-            <img src={articleImages.ctaFamily} alt="" />
+            <div className="article-cta__image">
+              <img src={articleImages.ctaFamily} alt="" />
+            </div>
           </section>
         </article>
         <Sidebar />

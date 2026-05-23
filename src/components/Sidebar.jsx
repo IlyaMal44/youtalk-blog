@@ -41,6 +41,8 @@ function Sidebar() {
         <p>Проработать небольшие проблемы и продвинуться к важным изменениям.</p>
         <strong>18 500 ₽</strong>
         <button className="button button--primary" type="button">Купить</button>
+        <img className="sidebar-card__price-image sidebar-card__price-image--one" src={sidebarImages.priceCardOne} alt="" />
+        <img className="sidebar-card__price-image sidebar-card__price-image--two" src={sidebarImages.priceCardTwo} alt="" />
       </section>
     </aside>
   )

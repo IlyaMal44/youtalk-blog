@@ -640,9 +640,10 @@ ol {
 
 .article-cta {
   display: grid;
-  grid-template-columns: 1fr 320px;
-  gap: 90px;
+  grid-template-columns: 348px 520px;
+  gap: 303px;
   align-items: center;
+  width: 1200px;
   padding-top: 72px;
   border-top: 1px solid #dedede;
 }
@@ -657,6 +658,24 @@ ol {
 .article-cta p {
   margin-bottom: 32px;
   font-size: 18px;
+}
+
+.article-cta__image {
+  position: relative;
+  width: 520px;
+  height: 330px;
+  overflow: hidden;
+}
+
+.article-cta__image img {
+  position: absolute;
+  top: -38px;
+  left: 77px;
+  width: 369px;
+  height: 369px;
+  max-width: none;
+  object-fit: contain;
+  filter: drop-shadow(0 4px 8px rgba(41, 99, 163, 0.6));
 }
 
 .sidebar {
@@ -814,16 +833,16 @@ ol {
 }
 
 .sidebar-banner__gift--two {
-  top: 204px;
-  left: 175px;
+  top: 184px;
+  left: 196px;
   width: 79px;
   height: 120px;
   transform: rotate(-90deg);
 }
 
 .sidebar-banner__gift--three {
-  top: 168px;
-  left: -10px;
+  top: 151px;
+  left: 7px;
   width: 112px;
   height: 146px;
   transform: rotate(90deg);
@@ -831,18 +850,34 @@ ol {
 
 .sidebar-card--price {
   position: relative;
+  min-height: 304px;
+  border-radius: 24px;
   text-align: left;
 }
 
-.sidebar-card--price::after {
-  content: '';
+.sidebar-card--price > :not(.sidebar-card__price-image) {
+  position: relative;
+  z-index: 1;
+}
+
+.sidebar-card__price-image {
   position: absolute;
-  right: -32px;
-  bottom: -32px;
+  z-index: 0;
+  object-fit: cover;
+}
+
+.sidebar-card__price-image--one {
+  right: 5px;
+  bottom: -21px;
   width: 112px;
-  height: 112px;
-  border-radius: 50%;
-  background: #ffbf8e;
+  height: 106px;
+}
+
+.sidebar-card__price-image--two {
+  right: -87px;
+  bottom: -34px;
+  width: 137px;
+  height: 121px;
 }
 
 .sidebar-card--price strong {
