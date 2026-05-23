@@ -452,6 +452,11 @@ ol {
   height: 380px;
 }
 
+.article__image--short {
+  width: 281px;
+  height: 174px;
+}
+
 .article__toc {
   margin-bottom: 24px;
 }
@@ -498,6 +503,34 @@ ol {
   grid-template-columns: 282px 1fr;
   gap: 24px;
   align-items: start;
+}
+
+.article__media-row--short {
+  grid-template-columns: 281px 1fr;
+}
+
+.article__frame-quote {
+  position: relative;
+  min-height: 168px;
+  padding: 24px 100px;
+  text-align: center;
+}
+
+.article__frame-quote::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  margin: auto;
+  width: 240px;
+  height: 168px;
+  border-radius: 50%;
+  background: #f3f7fe;
+}
+
+.article__frame-quote p {
+  position: relative;
+  z-index: 1;
+  font-style: italic;
 }
 
 .article p,
