@@ -875,15 +875,30 @@ ol {
 }
 
 .footer__badge {
-  display: inline-flex;
-  align-items: center;
-  min-height: 48px;
+  display: grid;
+  grid-template-columns: 99.8px 112.8px;
+  grid-template-rows: 50px;
+  align-items: start;
+  gap: 8px;
+  width: 221px;
+  height: 50px;
   margin-bottom: 40px;
-  padding: 0 12px;
-  border: 2px solid rgba(255, 255, 255, 0.8);
-  border-radius: 8px;
-  font-size: 22px;
-  font-weight: 700;
+}
+
+.footer__badge-logo,
+.footer__badge-member {
+  display: block;
+}
+
+.footer__badge-logo {
+  width: 99.8px;
+  height: 50px;
+}
+
+.footer__badge-member {
+  width: 112.8px;
+  height: 19.1px;
+  margin-top: 18.9px;
 }
 
 .socials {
@@ -898,9 +913,14 @@ ol {
   justify-content: center;
   width: 32px;
   height: 32px;
-  color: var(--color-blue);
-  background: #ffffff;
+  background: #eff5fb;
   border-radius: 50%;
+}
+
+.socials img {
+  display: block;
+  max-width: 20px;
+  max-height: 20px;
 }
 
 .footer__bottom {

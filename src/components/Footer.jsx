@@ -1,5 +1,18 @@
-import { footerColumns, socialItems } from '../data/blogData'
+import skLogo from '../assets/youtalk/footer/sk-logo.svg'
+import skMember from '../assets/youtalk/footer/sk-member.svg'
+import socialDzen from '../assets/youtalk/footer/social-dzen.svg'
+import socialTg from '../assets/youtalk/footer/social-tg.svg'
+import socialTwitter from '../assets/youtalk/footer/social-twitter.svg'
+import socialVk from '../assets/youtalk/footer/social-vk.svg'
+import { footerColumns } from '../data/blogData'
 import Icon from './Icon'
+
+const socialItems = [
+  { name: 'ВКонтакте', icon: socialVk },
+  { name: 'Telegram', icon: socialTg },
+  { name: 'Twitter', icon: socialTwitter },
+  { name: 'Дзен', icon: socialDzen },
+]
 
 function Footer() {
   return (
@@ -26,12 +39,15 @@ function Footer() {
         </section>
 
         <div className="footer__social">
-          <div className="footer__badge" aria-label="Участник Сколково">Sk Участник</div>
+          <div className="footer__badge" aria-label="Участник Сколково">
+            <img className="footer__badge-logo" src={skLogo} alt="" />
+            <img className="footer__badge-member" src={skMember} alt="" />
+          </div>
           <ul className="socials" aria-label="Социальные сети">
             {socialItems.map((social) => (
-              <li key={social}>
-                <a href="/blog" aria-label={`Социальная сеть ${social}`}>
-                  <Icon name={social} />
+              <li key={social.name}>
+                <a href="/blog" aria-label={social.name}>
+                  <img src={social.icon} alt="" />
                 </a>
               </li>
             ))}
