@@ -29,8 +29,11 @@ function Sidebar() {
       </section>
 
       <a className="sidebar-banner" href="/blog">
+        <img className="sidebar-banner__confetti" src={sidebarImages.giftBg} alt="" />
         <span>Дарите заботу</span>
-        <img src={sidebarImages.gift} alt="" />
+        <img className="sidebar-banner__gift sidebar-banner__gift--one" src={sidebarImages.giftOne} alt="" />
+        <img className="sidebar-banner__gift sidebar-banner__gift--two" src={sidebarImages.giftTwo} alt="" />
+        <img className="sidebar-banner__gift sidebar-banner__gift--three" src={sidebarImages.giftThree} alt="" />
       </a>
 
       <section className="sidebar-card sidebar-card--price">

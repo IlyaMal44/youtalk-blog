@@ -482,6 +482,14 @@ ol {
   padding-left: 24px;
 }
 
+.article__toc ul ul li:nth-child(2) {
+  margin-left: 16px;
+}
+
+.article__toc ul ul li:nth-child(3) {
+  margin-left: 32px;
+}
+
 .article__toc li::marker,
 .article__list li::marker {
   color: var(--color-accent);
@@ -558,11 +566,14 @@ ol {
 .quote::before {
   content: '“';
   position: absolute;
-  top: 2px;
+  top: 20px;
   left: 24px;
-  color: #9dcbf7;
-  font-size: 56px;
-  line-height: 1;
+  width: 56px;
+  height: 36px;
+  color: rgba(51, 51, 51, 0.06);
+  font-size: 88px;
+  font-weight: 700;
+  line-height: 0.65;
 }
 
 .quote cite {
@@ -760,10 +771,10 @@ ol {
 }
 
 .sidebar-banner {
-  display: grid;
+  position: relative;
+  display: block;
   min-height: 292px;
   overflow: hidden;
-  padding: 60px 24px 0;
   border-radius: 16px;
   background: #2963a3;
   color: #ffffff;
@@ -771,16 +782,51 @@ ol {
 }
 
 .sidebar-banner span {
-  position: relative;
+  position: absolute;
+  top: 60px;
+  left: 24px;
   z-index: 1;
+  width: 234px;
   font-size: 32px;
   font-weight: 700;
   line-height: 1.25;
 }
 
-.sidebar-banner img {
-  width: 170px;
-  margin: 18px auto 0;
+.sidebar-banner__confetti {
+  position: absolute;
+  top: 0;
+  left: 2px;
+  width: 281px;
+  height: 192px;
+  object-fit: cover;
+}
+
+.sidebar-banner__gift {
+  position: absolute;
+  object-fit: cover;
+}
+
+.sidebar-banner__gift--one {
+  top: 140px;
+  left: 104px;
+  width: 167px;
+  height: 159px;
+}
+
+.sidebar-banner__gift--two {
+  top: 204px;
+  left: 175px;
+  width: 79px;
+  height: 120px;
+  transform: rotate(-90deg);
+}
+
+.sidebar-banner__gift--three {
+  top: 168px;
+  left: -10px;
+  width: 112px;
+  height: 146px;
+  transform: rotate(90deg);
 }
 
 .sidebar-card--price {

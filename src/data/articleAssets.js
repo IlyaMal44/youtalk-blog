@@ -7,7 +7,10 @@ import articleSunset from '../assets/youtalk/images/article-sunset.png'
 import articleWoman from '../assets/youtalk/images/article-woman.png'
 import ctaFamily from '../assets/youtalk/images/cta-family.png'
 import sidebarChat from '../assets/youtalk/images/sidebar-chat.png'
-import sidebarGift from '../assets/youtalk/images/sidebar-gift.png'
+import sidebarGiftOne from '../assets/youtalk/images/sidebar-gift-1.png'
+import sidebarGiftTwo from '../assets/youtalk/images/sidebar-gift-2.png'
+import sidebarGiftThree from '../assets/youtalk/images/sidebar-gift-3.png'
+import sidebarGiftBg from '../assets/youtalk/images/sidebar-gift-bg.png'
 import sidebarPerson from '../assets/youtalk/images/sidebar-person.png'
 
 export const articleImages = {
@@ -23,6 +26,9 @@ export const articleImages = {
 
 export const sidebarImages = {
   chat: sidebarChat,
-  gift: sidebarGift,
+  giftBg: sidebarGiftBg,
+  giftOne: sidebarGiftOne,
+  giftTwo: sidebarGiftTwo,
+  giftThree: sidebarGiftThree,
   person: sidebarPerson,
 }
